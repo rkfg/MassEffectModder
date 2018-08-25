@@ -1136,6 +1136,7 @@ namespace MassEffectModder
 
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
         {
+	/*
             string name = Microsoft.VisualBasic.Interaction.InputBox("Please enter texture name or CRC.\n\nYou can use * as wilcards.", "Search Texture", "", 0, 0);
             if (string.IsNullOrEmpty(name))
                 return;
@@ -1153,6 +1154,7 @@ namespace MassEffectModder
                 name = name.Split('.')[0]; // in case filename
                 searchTexture(name, 0);
             }
+	    */
         }
 
         private void extractToDDSFileToolStripMenuItem_Click(object sender, EventArgs e)

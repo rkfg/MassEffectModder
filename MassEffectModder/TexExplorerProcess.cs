@@ -27,7 +27,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Media.Imaging;
+//using System.Windows.Media.Imaging;
 
 namespace MassEffectModder
 {
@@ -857,6 +857,7 @@ namespace MassEffectModder
                 MessageBox.Show("Failed to extract to PNG file. Broken game files!");
                 return;
             }
+	    /*
             PngBitmapEncoder image = Image.convertToPng(data, mipmap.width, mipmap.height, format);
             if (File.Exists(outputFile))
                 File.Delete(outputFile);
@@ -864,6 +865,7 @@ namespace MassEffectModder
             {
                 image.Save(fs);
             }
+	    */
         }
 
     }

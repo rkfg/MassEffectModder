@@ -19,7 +19,7 @@
  *
  */
 
-using Microsoft.VisualBasic.Devices;
+//using Microsoft.VisualBasic.Devices;
 using StreamHelpers;
 using System;
 using System.Collections;
@@ -193,7 +193,7 @@ namespace MassEffectModder
         {
             string errors = "";
             int lastProgress = -1;
-            ulong memorySize = ((new ComputerInfo().TotalPhysicalMemory / 1024 / 1024) + 1023) / 1024;
+	    var memorySize = ((new System.Diagnostics.PerformanceCounter("Mono Memory", "Total Physical Memory").RawValue / 1024 / 1024) + 1023) / 1024;
 
             for (int e = 0; e < map.Count; e++)
             {

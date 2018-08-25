@@ -27,7 +27,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.Devices;
+//using Microsoft.VisualBasic.Devices;
 using System.Reflection;
 
 namespace MassEffectModder
@@ -761,7 +761,7 @@ namespace MassEffectModder
             if (File.Exists(filename))
                 File.Delete(filename);
 
-            ulong memorySize = ((new ComputerInfo().TotalPhysicalMemory / 1024 / 1024) + 1023) / 1024;
+            var memorySize = ((new System.Diagnostics.PerformanceCounter("Mono Memory", "Total Physical Memory").RawValue / 1024 / 1024) + 1023) / 1024;
             if (memorySize < 8)
             {
                 MessageBox.Show("Detected small amount of physical RAM (8GB is recommended).\nInstallation may take a long time.", "Installer");

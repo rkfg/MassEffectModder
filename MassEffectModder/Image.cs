@@ -23,7 +23,7 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
+//using System.Windows.Media.Imaging;
 using StreamHelpers;
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -179,7 +179,7 @@ namespace MassEffectModder
                         LoadImageBMP(stream, format);
                         break;
                     }
-                case ImageFormat.PNG:
+/*                case ImageFormat.PNG:
                 case ImageFormat.JPEG:
                     {
                         BitmapSource frame = null;
@@ -205,7 +205,7 @@ namespace MassEffectModder
                         MipMap mipmap = new MipMap(pixels, srcBitmap.PixelWidth, srcBitmap.PixelHeight, PixelFormat.ARGB);
                         mipMaps.Add(mipmap);
                         break;
-                    }
+                    }*/
                 default:
                     throw new Exception();
             }
@@ -424,7 +424,7 @@ namespace MassEffectModder
             return tmpData;
         }
 
-        public static PngBitmapEncoder convertToPng(byte[] src, int w, int h, PixelFormat format)
+/*        public static PngBitmapEncoder convertToPng(byte[] src, int w, int h, PixelFormat format)
         {
             byte[] tmpData = convertRawToARGB(src, w, h, format);
             PngBitmapEncoder png = new PngBitmapEncoder();
@@ -432,7 +432,7 @@ namespace MassEffectModder
             png.Frames.Add(BitmapFrame.Create(image));
             return png;
         }
-
+*/
         static private byte[] convertToFormat(PixelFormat srcFormat, byte[] src, int w, int h, PixelFormat dstFormat, bool dxt1HasAlpha = false, byte dxt1Threshold = 128)
         {
             byte[] tempData;
